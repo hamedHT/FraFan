@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="sum(5,14)">click me</button>
+    <script>
+        var a = 2
+        var b = 3
+        console.log(a == b)
+        console.log(a === b)
+        console.log(a != b)
+        console.log(a !== b)
+        console.log(a > b)
+        console.log(a < b)
+        // _______________________________________________________________________
+        var age = prompt('How is your age')
+        if (age > 15 && age <= 50){
+            alert('you can use this web site')
+        }else if(age > 50 || age == 14){
+            alert('you are login')
+        }else{
+            alert('you can not use this website')
+        }
+        age > 0 && age != 13? alert('your age is ' + age):alert('dead')
+
+        switch (age){
+            case 12:
+                alert('12')
+                break
+            case 14:
+                alert('14')
+                break
+            case 16:
+                alert('16')
+                break
+            default:
+                alert('incorrect')
+                break
+        }
+        // ___________________________________________________________________
+        function sum(a,b){
+            if (b === undefined){
+                b == 5;
+            }
+                return a+b;
+        }
+        var result = sum(10,20)
+        alert(result)
+
+    </script>
+</body>
+</html>
