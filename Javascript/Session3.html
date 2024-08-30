@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        // Loops
+        // var i = 10
+        // while (i>0){
+        //     document.getElementById('demo').innerHTML += '<div>hello</div>'
+        //     i--
+        // }
+        // for (var i=0;i<10;i++){
+        //     if (i%2 == 0){
+        //         document.getElementById('demo').innerHTML += '<div>hello</div> </br>'
+
+        //     }else{
+        //         document.getElementById('demo').innerText += prompt('enter a text: ')
+        //     }
+        // }
+        // var i=1
+        // do{
+        //     alert('frafan')
+        //     i--;
+        // }while(i>0);
+        
+        // for (var j=0;j<100;j++){
+        //     var password = prompt('enter your password: ')
+        //     if (password == '123456'){
+        //         break
+        //     }
+        // }
+        
+        // for (var k=0;k<11;k++){
+        //     if (k%3 == 0){
+        //         continue
+        //     }else{
+        //         alert(k)
+        //     }
+        // }
+        // ________________________________________________________________________
+        // Object
+        var gen = 'man'
+        var student = {
+            name : 'hamed',
+            family : 'hamedy',
+            age : 24,
+            work : function(){
+                document.write("____________________")
+            },
+            gen : 'teen'
+        }
+        console.log(student.name)
+        console.log(student['age'])
+        console.log(student.gen)
+        for(i in student){
+            if (typeof student[i] == 'function'){
+                student[i]();
+            }else{
+                alert(student[i]) 
+            }
+        }
+        // 
+        num = "52"
+        num = Number(num)
+        console.log(num,typeof num)
+        var grade = '15.25'
+        grade = parseFloat(grade);
+        grade = parseInt(grade)
+        var num1 = 235;
+        num1 = String(num1)
+        num1 = num1.toString()
+        num2 = 0
+        // str1 = ""
+        num2 = Boolean(num2)
+        console.log(num2,typeof num2)
+        // "5" + 2
+        // "5" - 2
+        // "5" * "2"
+
+    </script>
+</body>
+</html>
