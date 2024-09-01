@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="loader()">
+    <input type="text" onchange="changer(event)" onkeydown="keydown(event)" ondblclick="validate(event)">
+    <button onclick="clicker(event)" value="1">click</button>
+    <div onmouseover="mouseover(event)" onmouseout="mouseout(event)" style="width: 200px; height: 300px; background-color: antiquewhite;"></div>
+    <script>
+        function changer(event){
+            console.log(event.target.value)
+        }
+        function clicker(event){
+            if (event.ctrlKey){
+                alert(event.target.value)
+            }else{
+                alert("press the ctrl")
+            }
+        }
+        function mouseover(event){
+            event.target.innerHTML = 'hello'
+        }
+        function mouseout(event){
+            event.target.innerHTML = 'Byy'
+        }
+        function keydown(event){
+            console.log(event.keyCode)
+        }
+        function loader(){
+            console.log('loading...')
+        }
+        // ________________________________________________________________________
+        var text = "Frafan Academi      "
+        console.log(text.length)
+        function validate(event){
+            if (event.target.value.length < 3){
+                alert('your input is too low')
+            } 
+        var text2 = `gfg\ngh\'jh
+        h\thj
+        ghjk`
+        }
+        console.log(text[0])
+        var text3 = text + text2
+        console.log(text.toUpperCase())
+        console.log(text.toLowerCase())
+        console.log(text3.indexOf('k'))
+        console.log(text3.includes('gfg'))
+        console.log(text3.slice(2,12,2))
+        console.log(text3.substr(2,5))
+        console.log(text3.replace('ghjk','frafan'))
+        console.log(text.trim())
+        console.log(text3.split('g'))
+
+    </script>
+</body>
+</html>
