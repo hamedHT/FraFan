@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style6.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="clock" id="clock2"></div>
+    <script>
+    function clock(a){
+        console.log(a);
+        console.log(new Date());
+    }
+    var timer = setTimeout(clock,2000,'Hi')
+    clearTimeout(timer)
+
+    var timer2 = setInterval(clock,2000,'Hi')
+    clearInterval(timer2)
+
+    var count = 0
+    setTimeout(function run(){
+        console.log('HI')
+        count ++;
+        if (count < 10){
+            setTimeout(run,1000)
+        }
+    },1000)
+
+    // _________________________________________________________________________
+    // project-DigitalClock
+    function DigitalClock(){
+        var d = new Date();
+        var hour = d.getHours()
+        var minute = d.getMinutes()
+        var second = d.getSeconds()
+
+        var p = 'AM';
+        if (hour > 12){
+            hour = hour - 12
+            p = 'PM'
+        }
+        var Clock = hour + ":" + minute + ":" + second + " " + p
+        document.getElementById('clock2').innerHTML = Clock
+        setTimeout(DigitalClock,1000)
+    }
+    DigitalClock()
+    // ____________________________________________________________________
+    // let
+    // 'use strict'
+    // global-local
+    </script>
+</body>
+</html>
