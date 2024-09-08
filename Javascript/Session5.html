@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var names = ['ali','reza','ahmad','abas']
+        for(var i=0;i<names.length;i++){
+            console.log(names[i])
+        }
+        names.forEach(function(value,index){
+            console.log(value)
+            console.log(index)
+        })
+        names[names.length] = 'sadra'
+        names.push('farhad','ehsan')
+        console.log(names.toString())
+        console.log(names.join('|*|'))
+        var lastItem = names.pop()
+        var names2 = [', moeen']
+        var total= names + names2
+        alert(total)
+        var numbers = [100,2,15,45,76]
+        var list2 = numbers.filter(function(value){
+            return value > 40
+        })
+        console.log(list2)
+
+        var list3 = numbers.map(function(value){
+            return value * 2
+        })
+        console.log(list3)
+
+        var check = numbers.every(function(value){
+            return value > 40
+        })
+        console.log(check)
+
+        var check2 = numbers.some(function(value){
+            return value > 40
+        })
+        console.log(check2)
+
+        console.log(numbers.indexOf(76))
+        console.log(numbers.sort())
+        console.log(numbers.sort(function(a,b){
+            return b - a
+        }))
+        console.log(Math.min(...numbers))
+        console.log(Math.max(...numbers))
+
+        // _____________________________________________________________________________________________
+
+        var months = [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December"
+            ];
+
+            var days = [
+                "Sunday",
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+            ];
+
+            var d = new Date();
+            d.setFullYear(2016);
+            console.log(d);
+    </script>
+</body>
+
+</html>
